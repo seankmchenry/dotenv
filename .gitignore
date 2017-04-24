@@ -1,0 +1,6 @@
+.DS_Store
+Thumbs.db
+.env
+content/plugins/soil/
+packages/
+wp/

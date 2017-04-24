@@ -1,0 +1,36 @@
+{
+  "name": "ecmdesigner/dotenv",
+  "authors": [
+    {
+      "name": "Sean McHenry",
+      "email": "sean@seanmchenry.com"
+    }
+  ],
+  "config": {
+    "vendor-dir": "packages"
+  },
+  "require": {
+    "composer/installers": "~1.2.0",
+    "vlucas/phpdotenv": "^2.0.1",
+    "johnpbloch/wordpress": "4.7.4",
+    "oscarotero/env": "^1.0",
+    "roots/wp-password-bcrypt": "1.0.0",
+    "roots/soil": "3.7.1"
+  },
+  "extra": {
+    "installer-paths": {
+      "content/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
+      "content/plugins/{$name}/": ["type:wordpress-plugin"],
+      "content/themes/{$name}/": ["type:wordpress-theme"]
+    },
+    "wordpress-install-dir": "wp"
+  },
+  "scripts": {
+    "generate-config" : [
+      "packages/scottjs/wp-dotenv/generate-config.sh"
+    ],
+    "generate-config-with-salts" : [
+      "packages/scottjs/wp-dotenv/generate-config.sh salts"
+    ]
+  }
+}
