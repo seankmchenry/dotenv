@@ -3,5 +3,7 @@ Thumbs.db
 .env
 .htaccess
 content/plugins/soil/
+content/uploads/*
+!content/uploads/.gitkeep
 packages/
 wp/
